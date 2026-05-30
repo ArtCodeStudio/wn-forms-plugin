@@ -1,7 +1,7 @@
 {
     "name": "jumplink/wn-forms-plugin",
     "type": "winter-plugin",
-    "description": "Speichert Formular-Einsendungen (z. B. Kontaktformular) im Winter CMS und macht sie im Backend einsehbar – filterbar nach Formular.",
+    "description": "Winter CMS plugin that stores form submissions (e.g. contact forms) in the CMS, viewable and filterable by form in the backend.",
     "license": "MIT",
     "authors": [
         {
