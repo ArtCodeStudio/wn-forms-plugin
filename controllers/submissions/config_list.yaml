@@ -1,0 +1,18 @@
+list: $/jumplink/forms/models/submission/columns.yaml
+title: jumplink.forms::lang.submissions.menu_label
+modelClass: JumpLink\Forms\Models\Submission
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 30
+defaultSort:
+    column: created_at
+    direction: desc
+recordUrl: jumplink/forms/submissions/update/:id
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+
+filter: config_filter.yaml

@@ -1,0 +1,35 @@
+fields:
+    form_label:
+        label: Formular
+        type: text
+        span: left
+        readOnly: true
+    created_at:
+        label: Eingegangen am
+        type: datetime
+        span: right
+        readOnly: true
+
+    name:
+        label: Name
+        type: text
+        span: left
+    email:
+        label: E-Mail
+        type: text
+        span: right
+
+    status:
+        label: Status
+        type: dropdown
+        span: left
+        options:
+            new: Neu
+            read: Gelesen
+            done: Erledigt
+
+    data:
+        label: Übermittelte Felder
+        type: partial
+        path: $/jumplink/forms/models/submission/_data_field.htm
+        span: full

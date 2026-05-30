@@ -1,0 +1,8 @@
+<?php
+$labels = ['new' => 'Neu', 'read' => 'Gelesen', 'done' => 'Erledigt'];
+$classes = ['new' => 'label-info', 'read' => 'label-default', 'done' => 'label-success'];
+$status = $record->status ?: 'new';
+?>
+<span class="label <?= $classes[$status] ?? 'label-default' ?>">
+    <?= e($labels[$status] ?? $status) ?>
+</span>

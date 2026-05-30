@@ -1,0 +1,16 @@
+{
+    "name": "jumplink/wn-forms-plugin",
+    "type": "winter-plugin",
+    "description": "Speichert Formular-Einsendungen (z. B. Kontaktformular) im Winter CMS und macht sie im Backend einsehbar – filterbar nach Formular.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JumpLink – Art+Code Studio",
+            "email": "pascal@artandcode.studio",
+            "homepage": "https://artandcode.studio"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

@@ -1,0 +1,5 @@
+name: jumplink.forms::lang.submissions.label
+form: $/jumplink/forms/models/submission/fields.yaml
+modelClass: JumpLink\Forms\Models\Submission
+
+defaultRedirect: jumplink/forms/submissions

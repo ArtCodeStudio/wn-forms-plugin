@@ -1,0 +1,31 @@
+<?php
+$data = $model->data ?: [];
+$labels = [
+    'name'        => 'Name',
+    'email'       => 'E-Mail',
+    'phone'       => 'Telefon',
+    'message'     => 'Nachricht',
+    'userMessage' => 'Nachricht',
+    'firstname'   => 'Vorname',
+    'lastname'    => 'Nachname',
+    'street'      => 'Straße',
+    'zip'         => 'PLZ',
+    'date'        => 'Datum',
+    'quantity'    => 'Personen',
+];
+?>
+<?php if (empty($data)): ?>
+    <p class="text-muted">Keine Felddaten gespeichert.</p>
+<?php else: ?>
+    <table class="table data-table">
+        <tbody>
+        <?php foreach ($data as $key => $value): ?>
+            <?php if (is_array($value)) { $value = json_encode($value, JSON_UNESCAPED_UNICODE); } ?>
+            <tr>
+                <th style="width: 200px;"><?= e($labels[$key] ?? $key) ?></th>
+                <td><?= nl2br(e((string) $value)) ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+<?php endif; ?>

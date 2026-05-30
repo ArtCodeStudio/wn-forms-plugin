@@ -1,0 +1,18 @@
+scopes:
+    form:
+        label: Formular
+        type: group
+        modelClass: JumpLink\Forms\Models\Submission
+        nameFrom: form_label
+        valueFrom: form
+        options: getFormOptions
+    status:
+        label: Status
+        type: group
+        options:
+            new: Neu
+            read: Gelesen
+            done: Erledigt
+    created_at:
+        label: Eingegangen
+        type: date

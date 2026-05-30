@@ -1,0 +1,20 @@
+columns:
+    form_label:
+        label: Formular
+        searchable: true
+        sortable: true
+    name:
+        label: Name
+        searchable: true
+    email:
+        label: E-Mail
+        searchable: true
+    status:
+        label: Status
+        type: partial
+        path: $/jumplink/forms/models/submission/_status_column.htm
+        sortable: true
+    created_at:
+        label: Eingegangen
+        type: datetime
+        sortable: true
