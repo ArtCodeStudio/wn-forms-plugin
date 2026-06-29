@@ -6,7 +6,12 @@ fields:
         readOnly: true
     created_at:
         label: Eingegangen am
-        type: datetime
+        # Winter has no "datetime" form-field type (that exists only for list
+        # columns) — use the datepicker widget in datetime mode. Rendering the
+        # bare "datetime" type threw SystemException: partial _field_datetime
+        # not found, which 500'd the whole submission detail view.
+        type: datepicker
+        mode: datetime
         span: right
         readOnly: true
 
