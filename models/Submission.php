@@ -30,6 +30,7 @@ class Submission extends Model
     public static $formLabels = [
         'contact'     => 'Kontaktformular',
         'reservation' => 'Reservierung',
+        'phone'       => 'Telefonnachricht',
     ];
 
     /**
