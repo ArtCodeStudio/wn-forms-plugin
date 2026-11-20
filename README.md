@@ -36,6 +36,30 @@ Im bestehenden Formular-Handler (zusätzlich zum Mailversand) speichern:
 Empfehlung: den `store()`-Aufruf in ein eigenes `try/catch` setzen, damit ein
 Speicherfehler den E-Mail-Versand nicht blockiert.
 
+## Telefonnachrichten
+
+Ein Telefonassistent (z. B. [sprechstunde](https://github.com/JumpLink/sprechstunde))
+kann Nachrichten fürs Team abgeben:
+
+```
+POST /api/jumplink/forms/phone-message
+Authorization: Bearer <JUMPLINK_FORMS_PHONE_TOKEN>
+Content-Type: application/json
+
+{"name": "Jo Doe", "phone": "+4900000000", "message": "…", "venue": "…", "receivedAt": "…"}
+```
+
+Die Nachricht wird als Einsendung `phone` gespeichert und per E-Mail
+verschickt. In der `.env` der Winter-Installation:
+
+- `JUMPLINK_FORMS_PHONE_TOKEN` – Pflicht; ohne Token antwortet der Endpunkt
+  immer 401.
+- `JUMPLINK_FORMS_PHONE_MAILTO` – optional; sonst die `email_address` des
+  aktiven Themes, sonst `mail.from.address`.
+
+Antwort `201`, wenn gespeichert oder verschickt; `401` falsches Token, `422`
+fehlende Felder, `503` weder gespeichert noch verschickt.
+
 ## Backend
 
 Unter **Formulare → Einsendungen**:
